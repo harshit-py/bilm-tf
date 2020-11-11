@@ -1091,6 +1091,7 @@ def dump_weights(tf_save_dir, outfile):
             model = LanguageModel(options, False)
             # we use the "Saver" class to load the variables
             loader = tf.train.Saver()
+            print(sess, ckpt_file)
             loader.restore(sess, ckpt_file)
 
         with h5py.File(outfile, 'w') as fout:
