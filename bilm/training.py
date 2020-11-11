@@ -1067,7 +1067,7 @@ def dump_weights(tf_save_dir, outfile):
     Dump the trained weights from a model to a HDF5 file.
     '''
     import h5py
-
+    print('******HERE******')
     def _get_outname(tf_name):
         outname = re.sub(':0$', '', tf_name)
         outname = outname.lstrip('lm/')
