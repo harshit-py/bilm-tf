@@ -1046,6 +1046,7 @@ def test(options, ckpt_file, data, batch_size=256):
 
 def load_options_latest_checkpoint(tf_save_dir):
     options_file = os.path.join(tf_save_dir, 'options.json')
+    print(f"tf_save_dir path:  {tf_save_dir}")
     ckpt_file = tf.train.latest_checkpoint(tf_save_dir)
 
     with open(options_file, 'r') as fin:
